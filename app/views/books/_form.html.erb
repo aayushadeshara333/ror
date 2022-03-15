@@ -1,0 +1,47 @@
+<%= form_with model: book do |form| %>
+  <div>
+    <%= form.label :book_title %><br>
+    <%= form.text_field :book_title %>
+    <% book.errors.full_messages_for(:book_title).each do |message| %>
+      <div><%= message%></div>
+    <%end%>
+  </div>
+  <div>
+    <%= form.label :book_title_confirmation %><br>
+    <%= form.text_field :book_title_confirmation %>
+    <% book.errors.full_messages_for(:book_title_confirmation).each do |message| %>
+      <div><%= message%></div>
+    <%end%>
+  </div>
+  <div>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+    <% book.errors.full_messages_for(:author).each do |message| %>
+      <div><%= message%></div>
+    <%end%>
+  </div>
+  <div>
+    <%= form.label :year %><br>
+    <%= form.text_field :year %>
+    <% book.errors.full_messages_for(:year).each do |message| %>
+      <div><%= message%></div>
+    <%end%>
+  </div>
+  <div>
+    <%= form.label :rating %><br>
+    <%= form.text_field :rating %>
+    <% book.errors.full_messages_for(:rating).each do |message| %>
+      <div><%= message%></div>
+    <%end%>
+  </div>
+  <div>
+    <%= form.label :checkbox %><br>
+    <%= form.check_box :checkbox %>
+    <% book.errors.full_messages_for(:checkbox).each do |message| %>
+      <div><%= message%></div>
+    <%end%>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
