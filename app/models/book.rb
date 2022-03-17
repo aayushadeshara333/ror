@@ -34,6 +34,12 @@ class Book < ApplicationRecord
     after_update do |x|
         p "After Update"
     end
+    before_destroy do |x|
+        p "Before Destroy"
+    end
+    after_destroy do |x|
+        p "After Destroy"
+    end
     # around_save do |x|
     #     p "Around Save"
     #     # self.save!
