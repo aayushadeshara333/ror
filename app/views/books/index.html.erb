@@ -10,14 +10,13 @@
   </thead>
   <tbody>
     <% @books.each do |book| %>
-      <a href="<%= book_path(book)%>">
-        <tr>
-          <td><%= book.book_title %></td>
-          <td><%= book.author %></td>
-          <td><%= book.year %></td>
-          <td><%= book.rating %></td>
-        </tr>
-      </a>
+      <tr class="clickable "
+		   onclick='window.location="<%= book_path(book)%>"' style="cursor: pointer;">
+        <td><%= book.book_title %></td>
+        <td><%= book.author %></td>
+        <td><%= book.year %></td>
+        <td><%= book.rating %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
